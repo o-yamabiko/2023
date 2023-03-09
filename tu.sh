@@ -127,6 +127,7 @@ LC_COLLATE=C.UTF-8 sed \
     -e 's/<p align=\"right\" style=\"text-align:right;\"><span /<span class=\"haigo\" /' \
     -e 's/&ensp;/ /g' \
     -e "s/\(>[^<]*\)'\([^<]*<\)/\1\&apos;\2/g" \
+    -e "s/\(>[^<]*\)<span class=\"ja\">…<\/span>\([^<]*<\)/\1\&hellip;\2/g" \
     -e 's/<rt>[＊*]<\/rt>/<rt>（　　　）<\/rt>/g' \
     -e 's/ class=\"ruby_level_[0-9][0-9]*\"//g' \
     -e 's/\(<a [^>]*\)><span /\1 /g' \
